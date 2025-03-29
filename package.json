@@ -1,6 +1,6 @@
 {
   "name": "grs-p2p",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "description": "Communicate on the Groestlcoin P2P network with minimal overhead or dependencies",
   "main": "./lib/index.js",
   "types": "./lib/index.d.ts",
@@ -21,7 +21,7 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "grs-minimal": "^2.0.2",
+    "grs-minimal": "^2.0.4",
     "source-map-support": "^0.5.21"
   },
   "devDependencies": {

@@ -12,7 +12,7 @@ import {
   Address,
 } from "./messages";
 import { NetAddress } from "./messages/address";
-import { MAGIC_NUMS, MAX_PER_MSG, SEGWIT, VERSIONS } from "./config";
+import { MAGIC_NUMS, MAX_PER_MSG, SEGWIT, VERSIONS, PORTS } from "./config";
 import { GetHeadersOptions } from "./messages/headers";
 import { VersionOptions } from "./messages/version";
 import CustomEvents from "./events";
@@ -89,7 +89,7 @@ export default class Peer extends (EventEmitter as new () => PeerEmitter) {
   constructor({
     node,
     port,
-    ticker = "BSV",
+    ticker = "GRS",
     validate = true,
     autoReconnect = true,
     autoReconnectWait = 1000 * 2, // 2 seconds
@@ -113,7 +113,7 @@ export default class Peer extends (EventEmitter as new () => PeerEmitter) {
     this.segwit = segwit;
     this.blockByteBuffer = blockByteBuffer;
 
-    this.port = port || 8333;
+    this.port = port || PORTS[ticker] || 1331;
     if (!port && node.split(":").length > 1) {
       const split = node.split(":");
       const portNum = parseInt(split[split.length - 1]);
