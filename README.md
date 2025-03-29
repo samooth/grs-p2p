@@ -26,8 +26,8 @@ Hash Info:
 ```js
 const GrsP2P = require("grs-p2p").default;
 
-const node = "95.217.42.32"; // ipv4 or ipv6 address
-const ticker = "grs"; // Also works with BTC, BCH, XEC and other bitcoin network protocols
+const node = "104.236.178.245"; // ipv4 or ipv6 address
+const ticker = "GRS"; // Choose between networks: GRS tGRS rGRS sGRS
 const peer = new GrsP2P({ node, ticker });
 
 const fs = require("fs");
@@ -82,18 +82,16 @@ peer.fetchNewBlocks((hashes) => hashes); // Return filtered block hashes to down
 ### Other methods
 
 ```js
-const BitcoinP2P = require("grs-p2p").default;
+const GrsP2P = require("grs-p2p").default;
 
 const node = "95.217.42.32"; // ipv4 or ipv6 address
 const port = 1331;
-const ticker = "grs"; // Also works with BTC, BCH, XEC and other bitcoin network protocols
-const segwit = false; // Set to true for BTC and other segwit coins
+const ticker = "GRS"; // Choose between networks: GRS tGRS rGRS sGRS
 const validate = true; // Perform merkle root validation
 const autoReconnect = true; // Attempt reconnect after disconnects
-const disableExtmsg = false; // Disable extension messages (> 4GB payloads). Set to true if ticker is not grs
 const mempoolTxs = true; // Receiving mempool tx announcements
 const DEBUG_LOG = false; // console.log detailed messages on what is happening
-const peer = new BitcoinP2P({
+const peer = new GrsP2P({
   node,
   port,
   ticker,
