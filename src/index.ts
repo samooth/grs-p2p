@@ -12,7 +12,7 @@ import {
   Address,
 } from "./messages";
 import { NetAddress } from "./messages/address";
-import { MAGIC_NUMS, MAX_PER_MSG, SEGWIT, VERSIONS, PORTS } from "./config";
+import { MAGIC_NUMS, MAX_PER_MSG, SEGWIT, USER_AGENTS, VERSIONS, PORTS } from "./config";
 import { GetHeadersOptions } from "./messages/headers";
 import { VersionOptions } from "./messages/version";
 import CustomEvents from "./events";
@@ -99,7 +99,7 @@ export default class Peer extends (EventEmitter as new () => PeerEmitter) {
     blockByteBuffer = 100000000, // Number of bytes of block data before processing. 100MB recommended. 0 for disabled
     magic = MAGIC_NUMS[ticker] || MAGIC_NUMS.DEFAULT,
     version = VERSIONS[ticker] || VERSIONS.DEFAULT,
-    user_agent,
+    user_agent = USER_AGENTS[ticker],
     start_height = 0,
     mempoolTxs = true,
   }: PeerOptions) {

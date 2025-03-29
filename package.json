@@ -1,6 +1,6 @@
 {
   "name": "grs-p2p",
-  "version": "2.0.3",
+  "version": "2.0.4",
   "description": "Communicate on the Groestlcoin P2P network with minimal overhead or dependencies",
   "main": "./lib/index.js",
   "types": "./lib/index.d.ts",
