@@ -84,7 +84,7 @@ peer.fetchNewBlocks((hashes) => hashes); // Return filtered block hashes to down
 ```js
 const GrsP2P = require("grs-p2p").default;
 
-const node = "95.217.42.32"; // ipv4 or ipv6 address
+const node = "104.236.178.245"; // ipv4 or ipv6 address
 const port = 1331;
 const ticker = "GRS"; // Choose between networks: GRS tGRS rGRS sGRS
 const validate = true; // Perform merkle root validation
@@ -95,10 +95,8 @@ const peer = new GrsP2P({
   node,
   port,
   ticker,
-  segwit,
   validate,
   autoReconnect,
-  disableExtmsg,
   mempoolTxs,
   DEBUG_LOG,
 });

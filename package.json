@@ -14,10 +14,10 @@
     "docs": "typedoc",
     "prepare": "npm run build && npm run docs"
   },
-  "author": "Kevin Johnson <kevinejohn@gmail.com>",
+  "author": "Tomás Díaz <tomas@bsv.direct>",
   "contributors": [
     "Andrew Johnson <andrewj@hey.com>",
-    "Tomás Díaz <tomas@bsv.direct>"
+    "Kevin Johnson <kevinejohn@gmail.com>"
   ],
   "license": "MIT",
   "dependencies": {
